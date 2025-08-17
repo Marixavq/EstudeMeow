@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do-List</title>
+  <link rel="stylesheet" href="./assets/css/vars.css">
+  <link rel="stylesheet" href="./assets/css/list.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+    <a href="./index.html"><i class="fa-solid fa-house casa"></i></a>
+    <!-- Aba de cores -->
+    <div id="colorTab" class="color-tab">
+      <div class="color-grid">
+        <div class="color-box gradient-pink" style="background-color: #f1bcbe;">
+          <img src="./assets/images/gatoblack.png" alt="">
+        </div>
+        <div class="color-box gradient-yellow" style="background-color: #fffbba;">
+          <img src="./assets/images/abelha.png" alt="">
+        </div>
+        <div class="color-box gradient-purple" style="background-color: #f6e3f2;">
+          <img src="./assets/images/logo.png" alt="">
+        </div>
+        <div class="color-box gradient-blue" style="background-color: #8787ff;">
+          <img src="./assets/images/robozinho.png" alt="">
+        </div>
+        <div class="color-box gradient-bronw" style="background-color: #c08a5c;">
+          <img src="./assets/images/pena.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <a href=""><i class="fa-solid fa-palette palete"></i></a>
+    
+    <div class="to-do">
+      <div class="header">
+        <p>Lista de Tarefas</p>
+        <button><i class='bx bxs-trash-alt'></i></button>
+      </div>
+      <hr />
+      <br />
+      <div class="divInsert">
+        <input class="textInsert" type="text" name="descricao" id="descricao" />
+        <button type="button" id="adicionarTarefa"><i class='bx bx-plus'></i></button>
+      </div>
+      <ul></ul>
+    </div>
+    <div id="notification-container"></div>
+  </div>
+
+  <!-- js -->
+  <script src="https://kit.fontawesome.com/b549ba979b.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/list.js"></script>
+  <script src="./assets/js/temas.js"></script>
+</body>
+
+</html>

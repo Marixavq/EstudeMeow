@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="./assets/css/vars.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="Logo">
+                <img src="./assets/images/logo.png" alt="logo">
+                <a href="./index.html" class="logo">Estude<span> ᨐᵉᵒ﻿ʷ</span></a>
+            </div>
+
+            <div id="menu" class="fas fa-bars"></div>
+
+            <!-- Aba de cores -->
+            <div id="colorTab" class="color-tab">
+                <div class="color-grid">
+                    <div class="color-box gradient-pink" style="background-color: #f1bcbe;">
+                        <img src="./assets/images/gatoblack.png" alt="">
+                    </div>
+                    <div class="color-box gradient-yellow" style="background-color: #fffbba;">
+                        <img src="./assets/images/abelha.png" alt="">
+                    </div>
+                    <div class="color-box gradient-purple" style="background-color: #f6e3f2;">
+                        <img src="./assets/images/logo.png" alt="">
+                    </div>
+                    <div class="color-box gradient-blue" style="background-color: #8787ff;">
+                        <img src="./assets/images/robozinho.png" alt="">
+                    </div>
+                    <div class="color-box gradient-bronw" style="background-color: #c08a5c;">
+                        <img src="./assets/images/pena.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <a href="./index.html">Início</a>
+                <a href="./metodos.html">Métodos</a>
+                <a href="./list.html">Lista</a>
+                <a href="./agenda.php">Calendário</a>
+                <a href="./sobre.html">Sobre Nós</a>
+                <a href="./review.php">Review</a>
+                <a href="./contact.html">Contato</a>
+                <a href=""><i class="fa-solid fa-palette palete"></i></a>
+            </nav>
+
+        </header>
+
+        <h1 class="headingcont">Contate-nos</h1>
+
+        <!-- contact section  -->
+
+        <section class="contact">
+
+            <div class="list-button">
+                <a href="https://www.instagram.com/meowestude?igsh=MTJuMm8yZzJhMW54bg==" target="_blank" class="btn">
+                    <i class="fa-brands fa-instagram icons"></i>
+                    <span class="message">@Meowestude</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61568459753875" target="_blank" class="btn">
+                    <i class="fa-brands fa-facebook-messenger icons"></i>
+                    <span class="message">@Meowestude</span>
+                </a>
+                <a href="https://criarmeulink.com.br/u/1732835903" target="_blank" class="btn">
+                    <i class="fa-regular fa-envelope icons"></i>
+                    <span class="message">@Meowestude</span>
+                </a>
+            </div>
+            <form id="avaliacaoForm" method="POST">
+
+                <form action="./php/users/acao_protegida.php" id="avaliacaoForm" method="POST">
+
+                    <div class="inputBox">
+                        <div class="textarea-container">
+                            <textarea placeholder="Escreva a sua mensagem..." class="textarea" name="comentario"
+                                id="comentario" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+    
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="estrelas" value="5" required />
+                        <label for="star5">&#9733;</label>
+    
+                        <input type="radio" id="star4" name="estrelas" value="4" />
+                        <label for="star4">&#9733;</label>
+    
+                        <input type="radio" id="star3" name="estrelas" value="3" />
+                        <label for="star3">&#9733;</label>
+    
+                        <input type="radio" id="star2" name="estrelas" value="2" />
+                        <label for="star2">&#9733;</label>
+    
+                        <input type="radio" id="star1" name="estrelas" value="1" />
+                        <label for="star1">&#9733;</label>
+                    </div>
+    
+                    <input type="submit" class="btn" value="enviar mensagem">
+    
+                </form>
+    
+    
+
+
+
+            <!-- Div para mostrar a mensagem de sucesso -->
+            <div id="mensagem" style="display:none; color:green; "></div>
+
+            <script>
+                document.getElementById('avaliacaoForm').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Evita o envio normal do formulário
+
+                    var formData = new FormData(this); // Obtém os dados do formulário
+
+                    // Envia a avaliação usando AJAX
+                    fetch('./php/avaliacoes/contact.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                document.getElementById('mensagem').style.display = 'block';
+                                document.getElementById('mensagem').textContent = data.message;
+                                document.getElementById('avaliacaoForm').reset(); // Limpa o formulário
+                            } else {
+                                document.getElementById('mensagem').style.display = 'block';
+                                document.getElementById('mensagem').textContent = data.message;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Erro:', error);
+                            document.getElementById('mensagem').style.display = 'block';
+                            document.getElementById('mensagem').textContent = 'Erro ao enviar a avaliação. Faça login e tente novamente.';
+                        });
+                });
+            </script>
+
+
+        </section>
+
+
+        <!-- footer section  -->
+
+        <footer>
+            <section class="footer">
+
+                <div class="box-container">
+
+                    <div class="box">
+                        <h3>Estude meow</h3>
+                        <p>Estamos aqui para facilitar seus estudos! Aprenda mais com o Estude Meow, um grupo
+                            independente de desenvolvedores com o intuito de tornar seus estudos mais produtivos. :3</p>
+                    </div>
+
+                    <div class="box lin">
+                        <h3>Links</h3>
+                        <a href="./index.html">Início</a>
+                        <a href="./metodos.html">Métodos</a>
+                        <a href="./list.html">Lista</a>
+                        <a href="./agenda.php">Calendário</a>
+                        <a href="./sobre.html">Sobre Nós</a>
+                        <a href="./review.php">Review</a>
+                        <a href="./contact.html">Contato</a>
+                    </div>
+
+                    <div class="box">
+                        <h3>Redes</h3>
+                        <a href="https://www.instagram.com/meowestude?igsh=MTJuMm8yZzJhMW54bg==" target="_blank">instagram</a>
+                        <a href="https://www.facebook.com/profile.php?id=61568459753875" target="_blank">facebook</a>
+                        <a href="https://criarmeulink.com.br/u/1732835903" target="_blank">email</a>
+                    </div>
+
+                    <div class="box">
+                        <h3>Contato</h3>
+                        <p> <i class="fas fa-phone"></i> +55 (11) 94002-8922 </p>
+                        <p> <i class="fas fa-envelope"></i> Meowestude@gmail.com </p>
+                        <p> <i class="fas fa-map-marker-alt"></i> Sp BarangaCity
+                            Rua Fubanga Town 353469 </p>
+                    </div>
+
+                </div>
+
+                <div class="credit"> created by <span> mr. web designer </span> | all rights reserved </div>
+
+            </section>
+
+    </div>
+    </footer>
+
+    <!-- custom js file link -->
+    <script src="https://kit.fontawesome.com/b549ba979b.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/temas.js"></script>
+
+</body>
+
+</html>

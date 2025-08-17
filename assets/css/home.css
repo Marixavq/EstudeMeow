@@ -1,0 +1,124 @@
+/* .container {
+  background: var(--background-color);
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+header,
+footer,
+.container,
+.footer {
+  background-color: var(--background-color);
+} */
+
+
+/* Ajuste específico para imagens rosa e amarelo */
+.home.gradient-pink {
+  background-size: auto; /* Mantém a largura original */
+  background-position: center; /* Centraliza a imagem */
+  height: auto; /* Define a altura automática para manter o tamanho original */
+}
+
+.home.gradient-yellow {
+  background-size: auto; /* Mantém a largura original */
+  background-position: center; /* Centraliza a imagem */
+  height: auto; /* Define a altura automática para manter o tamanho original */
+}
+
+main {
+  flex: 1;
+}
+
+.home-background .home {
+  background-image: url('../images/fundo_default.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .content {
+  flex: 1 1 40rem;
+  position: relative;
+  text-align: center;
+}
+
+.home .content .titulo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* Espaço entre a imagem e o título */
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  width: 38rem;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+.home .content img {
+  position: absolute;
+  top: -58%;
+  left: 0;
+  width: 150px;
+}
+
+.home .content h3 {
+  color: #000;
+  font-size: 4rem;
+}
+
+.home .content p {
+  padding: 2rem 0;
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 900;
+  color: #111;
+}
+
+#logout-btn {
+  display: flex;
+  justify-content: center;
+  /* margin: auto; */
+  /* margin-bottom: 28vh; */
+  /* padding: .3rem 1rem;  */
+  max-width: 20rem;
+  border: solid 2px #000;
+  border-radius: 30rem;
+  background: var(--central-color);
+  color: #000;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem auto;
+  padding: .8rem 4rem;
+}
+
+
+@media (max-width:991px) {
+  .navbar img {
+    display: none;
+  }
+
+  .home .content img {
+    width: 135px;
+  }
+}
+
+@media (max-width:400px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home .content img {
+    width: 118px;
+  }
+}

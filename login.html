@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/vars.css">
+    <link rel="stylesheet" href="./assets/css/login.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <div class="container">
+    <a href="./index.html"><i class="fa-solid fa-house casa"></i></a>
+
+        <!-- Aba de cores -->
+        <div id="colorTab" class="color-tab">
+            <div class="color-grid">
+                <div class="color-box gradient-pink" style="background-color: #f1bcbe;">
+                    <img src="./assets/images/gatoblack.png" alt="">
+                </div>
+                <div class="color-box gradient-yellow" style="background-color: #fffbba;">
+                    <img src="./assets/images/abelha.png" alt="">
+                </div>
+                <div class="color-box gradient-purple" style="background-color: #f6e3f2;">
+                    <img src="./assets/images/logo.png" alt="">
+                </div>
+                <div class="color-box gradient-blue" style="background-color: #8787ff;">
+                    <img src="./assets/images/robozinho.png" alt="">
+                </div>
+                <div class="color-box gradient-bronw" style="background-color: #c08a5c;">
+                    <img src="./assets/images/pena.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- forms -->
+
+        <div class="wrapper">
+
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="./php/users/login.php" method="POST">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="text" name="email" required />
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" name="password" id="password" required />
+                        <label>Senha</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox" onclick="togglePassword()" />Relembre-me</label>
+                        <a href="./recuperar.html">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>
+                            Não tem uma conta?<a href="#" class="register-link"> Cadastre-se</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box register">
+                <h2>Cadastro</h2>
+                <form action="./php/users/cadastro.php" method="POST">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span> <!-- Corrigido -->
+                        <input type="text" name="name" required />
+                        <label>Nome</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" name="email" required />
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" name="password" required />
+                        <label>Senha</label>
+                    </div>
+
+                    <button type="submit" class="btn">Cadastre-se</button>
+                    <div class="login-register">
+                        <p>
+                            Já possui uma conta?<a href="#" class="login-link"> Login</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <script src="https://kit.fontawesome.com/b549ba979b.js" crossorigin="anonymous"></script>
+        <script src="./assets/js/temas.js"></script>
+        <script src="./assets/js/login.js"></script>
+</body>
+
+</html>

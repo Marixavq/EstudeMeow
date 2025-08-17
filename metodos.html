@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- REMIXICON -->
+    <link rel="stylesheet" href="./assets/css/vars.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/metodos.css">
+
+    <title>Métodos de Estudo</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- navbar -->
+
+        <header>
+            <div class="Logo">
+                <img src="./assets/images/logo.png" alt="logo">
+                <a href="./index.html" class="logo">Estude<span> ᨐᵉᵒ﻿ʷ</span></a>
+            </div>
+
+            <div id="menu" class="fas fa-bars"></div>
+
+            <!-- Aba de cores -->
+            <div id="colorTab" class="color-tab" style="display: none;">
+                <div class="color-grid">
+                    <div class="color-box gradient-pink" style="background-color: #FFD1D1;">
+                        <img src="./assets/images/gatoblack.png" alt="">
+                    </div>
+                    <div class="color-box gradient-yellow" style="background-color: #fffbba;">
+                        <img src="./assets/images/abelha.png" alt="">
+                    </div>
+                    <div class="color-box gradient-purple" style="background-color: #f6e3f2;">
+                        <img src="./assets/images/logo.png" alt="">
+                    </div>
+                    <div class="color-box gradient-blue" style="background-color: #6da7cc;">
+                        <img src="./assets/images/robozinho.png" alt="">
+                    </div>
+                    <div class="color-box gradient-bronw" style="background-color: #D9BB84;">
+                        <img src="./assets/images/pena.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <a href="./index.html">Início</a>
+                <a href="./metodos.html">Métodos</a>
+                <a href="./list.html">Lista</a>
+                <a href="./agenda.php">Calendário</a>
+                <a href="./sobre.html">Sobre Nós</a>
+                <a href="./review.php">Review</a>
+                <a href="./contact.html">Contato</a>
+                <a href=""><i class="fa-solid fa-palette palete"></i></a>
+            </nav>
+
+        </header>
+
+
+        <h1 class="heading"> Métodos de estudo: </h1>
+
+        <!-- cards -->
+        <main class="main">
+            <section class="iner section">
+                <div class="card__container swiper">
+                    <div class="card__content">
+                        <div class="swiper-wrapper">
+
+                            <article class="card__article swiper-slide">
+                                <div class="card__data">
+                                    <h1 class="card__name">Quiz</h1>
+                                    <div class="card__image">
+                                        <img src="./assets/images/quiz.png" alt="image" class="card__img">
+                                    </div>
+                                    <a href="#" class="card__button" target="_blank" id="modalOpenQuiz">Saiba Mais</a>
+                                </div>
+                            </article>
+
+                            <article class="card__article swiper-slide">
+                                <div class="card__data">
+                                    <h1 class="card__name">Pomodoro</h1>
+                                    <div class="card__image">
+                                        <img src="./assets/images/pomodoro.png" alt="image" class="card__img">
+                                    </div>
+                                    <a href="#" class="card__button" id="modalOpenPomodoro">Saiba Mais</a>
+                                </div>
+                            </article>
+
+                            <article class="card__article swiper-slide">
+                                <div class="card__data">
+                                    <h1 class="card__name">Mapa Mental</h1>
+                                    <div class="card__image">
+                                        <img src="./assets/images/mp_mental.png" alt="image" class="card__img">
+                                    </div>
+                                    <a href="#" class="card__button" id="modalOpenMapaMental">Saiba Mais</a>
+                                </div>
+                            </article>
+
+                            <!-- Cards -->
+                            <article class="card__article swiper-slide">
+                                <div class="card__data">
+                                    <h1 class="card__name">GTD</h1>
+                                    <div class="card__image">
+                                        <img src="./assets/images/gtd.png" alt="image" class="card__img">
+                                    </div>
+                                    <a href="#" class="card__button" id="modalOpenGTD">Saiba Mais</a>
+                                </div>
+                            </article>
+
+
+                            <article class="card__article swiper-slide">
+                                <div class="card__data">
+                                    <h1 class="card__name">Intercalado</h1>
+                                    <div class="card__image">
+                                        <img src="./assets/images/intercalado.png" alt="image" class="card__img">
+                                    </div>
+                                    <a href="#" class="card__button" id="modalOpenIntercalado">Saiba Mais</a>
+                                </div>
+                            </article>
+
+                            <article class="card__article swiper-slide">
+                                <div class="card__data">
+                                    <h1 class="card__name">Auto Explicativo</h1>
+                                    <div class="card__image">
+                                        <img src="./assets/images/auto_explicativo.png" alt="image" class="card__img">
+                                    </div>
+                                    <a href="#" class="card__button" id="modalOpenAutoExplicativo">Saiba Mais</a>
+                                </div>
+                            </article>
+
+                            <article class="card__article swiper-slide">
+                                <div class="card__data">
+                                    <h1 class="card__name">Feynman</h1>
+                                    <div class="card__image">
+                                        <img src="./assets/images/feynman.png" alt="image" class="card__img">
+                                    </div>
+                                    <a href="#" class="card__button" id="modalOpenFeynman">Saiba Mais</a>
+                                </div>
+                            </article>
+
+                            <article class="card__article swiper-slide">
+                                <div class="card__data">
+                                    <h1 class="card__name">SQ3R</h1>
+                                    <div class="card__image">
+                                        <img src="./assets/images/sqr.png" alt="image" class="card__img">
+                                    </div>
+                                    <a href="#" class="card__button" id="modalOpenSQ3R">Saiba Mais</a>
+                                </div>
+                            </article>
+
+                            <article class="card__article swiper-slide">
+                                <div class="card__data">
+                                    <h1 class="card__name">Mnemônica</h1>
+                                    <div class="card__image">
+                                        <img src="./assets/images/mnemonica.png" alt="image" class="card__img">
+                                    </div>
+                                    <a href="#" class="card__button" id="modalOpenMnemonica">Saiba Mais</a>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!--navigation buttons -->
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+
+                    <!--pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal for Pomodoro -->
+        <div id="modalPomodoro" class="popup-outer">
+            <div class="popup-box">
+                <i id="closePomodoro" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="./assets/images/pomodoro.png" alt="Pomodoro">
+                    <div class="text">
+                        <span class="name">Pomodoro</span>
+                        <span class="profession">Método baseado no tempo e foco</span>
+                    </div>
+                </div>
+                <p>Esse método de estudo consiste em organizar a rotina em períodos de dedicação seguida de pequenos
+                    intervalos.
+                    Ele foi criado determinando períodos de 25 minutos de concentração, chamados de pomodoro, seguidos
+                    por intervalos de 5 minutos.
+                    Após 4 pomodoros, é preciso fazer uma pausa maior, entre 10 e 30 minutos.
+                    <br>
+                    <br>
+                <ul>
+                    <h3>Suas vantagens são:</h3>
+                    <br>
+                    <li>Aumenta o foco e concentração;</li>
+                    <li> Reduz a ansiedade;</li>
+                    <li>Melhora sua organização nos estudos;</li>
+                    <li>Otimiza o seu tempo de estudo;</li>
+                    <li>Mantém sua motivação para os estudos;</li>
+                    <li>Aumenta a sua produtividade;</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <!-- Modal for Mapa Mental -->
+        <div id="modalMapaMental" class="popup-outer">
+            <div class="popup-box">
+                <i id="closeMapaMental" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="./assets/images/mp_mental.png" alt="Mapa Mental">
+                    <div class="text">
+                        <span class="name">Mapa Mental</span>
+                        <span class="profession">Organizando suas ideias</span>
+                    </div>
+                </div>
+                <p>De modo geral, mapas mentais são esquemas que conectam ideias de forma simples e objetiva, que partem
+                    de uma ideia central e vão se desenrolando em subtópicos.(É importante que essas ideias estejam
+                    conectadas entre si.)
+                    <br>
+                    <br>
+                <ul>
+                    <h3>Suas vantagens são: </h3>
+                    <br>
+                    <li>Fácil compreensão;</li>
+                    <li> Fixação do conteúdo;</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <!-- Modal GTD -->
+
+        <div id="modalGTD" class="popup-outer">
+            <div class="popup-box">
+                <i id="closeGTD" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="./assets/images/gtd.png" alt="GTD">
+                    <div class="text">
+                        <span class="name">GTD</span>
+                        <span class="profession">Organização de tarefas</span>
+                    </div>
+                </div>
+                <p>Derivado de Getting Things Done, em inglês, o método GTD tem o objetivo de ajudar na organização da
+                    rotina para reduzir o estresse e a ansiedade, o que melhorará a concentração nos momentos de estudo.
+
+                    <br>
+                    <br>
+                <ul>
+                    <h3>Suas vantagens são:</h3>
+                    <br>
+                    <li>Mais eficiência;</li>
+                    <li>Maior produtividade;</li>
+                    <li>Organização;</li>
+
+                </ul>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Modal Intercalado -->
+        <div id="modalIntercalado" class="popup-outer">
+            <div class="popup-box">
+                <i id="closeIntercalado" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="./assets/images/intercalado.png" alt="Intercalado">
+                    <div class="text">
+                        <span class="name">Intercalado</span>
+                        <span class="profession">Condensando informações</span>
+                    </div>
+                </div>
+
+                <p>Consiste em estudar diferentes tópicos, mas que ainda há alguma relação, como por exemplo, você pode
+                    estudar a meteorologia (geografia) e a fauna e a flora (biologia) em um mesmo dia, já que eles têm
+                    algo em comum.
+
+                    <br>
+                    <br>
+                <ul>
+                    <h3>Suas vantagens são:</h3>
+                    <br>
+                    <li>Produtividade;</li>
+                    <li>Economia de tempo;</li>
+                    <li>Fixação de Conteúdo;</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <!-- Modal Auto Explicativo -->
+        <div id="modalAutoExplicativo" class="popup-outer">
+            <div class="popup-box">
+                <i id="closeAutoExplicativo" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="./assets/images/auto_explicativo.png" alt="Auto Explicativo">
+                    <div class="text">
+                        <span class="name">Auto Explicativo</span>
+                        <span class="profession">Aprendendo por conta própria</span>
+                    </div>
+                </div>
+                <p>O método de estudo autoexplicativo é uma técnica que enfatiza o processo de explicar o material
+                    estudado para si mesmo, com o objetivo de consolidar e aprofundar a compreensão.
+                    <br>
+                    <br>
+                <ul>
+                    <h3>Suas vantagens são:</h3>
+                    <br>
+                    <li>Melhoria na Compreensão;</li>
+                    <li>Consolidação da Memória;</li>
+                    <li>Desenvolvimento do Pensamento Crítico;</li>
+                    <li>Versatilidade;</li>
+
+                </ul>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Modal Feynman -->
+        <div id="modalFeynman" class="popup-outer">
+            <div class="popup-box">
+                <i id="closeFeynman" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="./assets/images/feynman.png" alt="Método Feynman">
+                    <div class="text">
+                        <span class="name">Feynman</span>
+                        <span class="profession">Explicação para Compreensão</span>
+                    </div>
+                </div>
+                <p>O Método de Feynman se baseia na ideia de que, para realmente entender um conceito, você deve ser
+                    capaz de
+                    explicá-lo claramente a outra pessoa. A técnica é eficaz para aprender e consolidar conhecimento de
+                    forma
+                    profunda.
+                    <br>
+                    <br>
+                <ul>
+                    <h3>Suas vantagens são:</h3>
+                    <br>
+                    <li>Clareza de Pensamento;</li>
+                    <li>Identificação de Lacunas;</li>
+                    <li>Reforço da Memória;</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <!-- Modal SQ3R -->
+        <div id="modalSQ3R" class="popup-outer">
+            <div class="popup-box">
+                <i id="closeSQ3R" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="./assets/images/sqr.png" alt="Método SQ3R">
+                    <div class="text">
+                        <span class="name">SQ3R</span>
+                        <span class="profession">Leitura Eficaz</span>
+                    </div>
+                </div>
+                <p>O método SQ3R é uma técnica de estudo desenvolvida por Francis Pleasant Robinson em 1946. SQ3R é um
+                    acrônimo
+                    que representa cinco etapas essenciais para a leitura eficaz: Survey (Explorar), Question
+                    (Questionar), Read
+                    (Ler), Recite (Recitar) e Review (Revisar).
+                    <br>
+                    <br>
+                <ul>
+                    <h3>Suas vantagens são:</h3>
+                    <br>
+                    <li>Foco e Organização;</li>
+                    <li>Identificação de Informações Relevantes;</li>
+                    <li>Concentração nas Informações Mais Importantes;</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <!-- Modal Mnemônica -->
+        <div id="modalMnemonica" class="popup-outer">
+            <div class="popup-box">
+                <i id="closeMnemonica" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="./assets/images/mnemonica.png" alt="Método Mnemônica">
+                    <div class="text">
+                        <span class="name">Mnemônica</span>
+                        <span class="profession">Facilitando a Memorização</span>
+                    </div>
+                </div>
+                <p>O estudo mnemônico remete ao ato de criar frases, referências e expressões capazes de ajudar na
+                    memorização
+                    de assuntos. Tratam-se de "macetes" que facilitam lembrar de fórmulas ou regras. A grande sacada é
+                    criar
+                    ganchos para que o cérebro associe ao conteúdo desejado.
+                    <br>
+                    <br>
+                <ul>
+                    <h3>Suas vantagens são:</h3>
+                    <br>
+                    <li>Melhoria na Retenção;</li>
+                    <li>Aumento da Eficiência;</li>
+                    <li>Aplicabilidade;</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <!-- Modal do Quiz -->
+
+        <div id="modalQuiz" class="popup-outer">
+            <div class="popup-box">
+                <i id="closeQuiz" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    <img src="./assets/images/roleta.avif" alt="Quiz">
+                    <div class="text">
+                        <span class="name">Quiz</span>
+                        <span class="profession">Descobrindo o Método compatível com você</span>
+                    </div>
+                </div>
+                <p>
+                    Esse quiz te ajudará a selecionar o método de estudo mais adequado a você!
+                    <br>
+                    Não sabe qual é métodos de estudos ideal para você? faça agora o teste e descubra!
+                </p>
+
+                <button onclick="window.location.href='quiz.html'" class="btn">Faça o quiz!</button>
+                </p>
+            </div>
+        </div>
+
+        <!-- footer section  -->
+
+        <footer>
+            <section class="footer">
+
+                <div class="box-container">
+
+                    <div class="box">
+                        <h3>Estude meow</h3>
+                        <p>Estamos aqui para facilitar seus estudos! Aprenda mais com o Estude Meow, um grupo
+                            independente de desenvolvedores com o intuito de tornar seus estudos mais produtivos. :3</p>
+                    </div>
+
+                    <div class="box lin">
+                        <h3>Links</h3>
+                        <a href="./index.html">Início</a>
+                        <a href="./metodos.html">Métodos</a>
+                        <a href="./list.html">Lista</a>
+                        <a href="./agenda.php">Calendário</a>
+                        <a href="./sobre.html">Sobre Nós</a>
+                        <a href="./review.php">Review</a>
+                        <a href="./contact.html">Contato</a>
+                    </div>
+
+                    <div class="box">
+                        <h3>Redes</h3>
+                        <a href="https://www.instagram.com/meowestude?igsh=MTJuMm8yZzJhMW54bg==" target="_blank">instagram</a>
+                        <a href="https://www.facebook.com/profile.php?id=61568459753875" target="_blank">facebook</a>
+                        <a href="https://criarmeulink.com.br/u/1732835903" target="_blank">email</a>
+                    </div>
+
+                    <div class="box">
+                        <h3>Contato</h3>
+                        <p> <i class="fas fa-phone"></i> +55 (11) 94002-8922 </p>
+                        <p> <i class="fas fa-envelope"></i> Meowestude@gmail.com </p>
+                        <p> <i class="fas fa-map-marker-alt"></i> Sp BarangaCity
+                            Rua Fubanga Town 353469 </p>
+                    </div>
+
+                </div>
+
+                <div class="credit"> created by <span> mr. web designer </span> | all rights reserved </div>
+
+            </section>
+
+    </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://kit.fontawesome.com/b549ba979b.js" crossorigin="anonymous"></script>
+    <script src="./js/modais.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/modais.js"></script>
+    <script src="./assets/js/metodos.js"></script>
+    <script src="./assets/js/temas.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

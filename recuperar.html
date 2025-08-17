@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recuperar senha</title>
+  <link rel="stylesheet" href="./assets/css/vars.css">
+  <link rel="stylesheet" href="./assets/css/recuperar_redefinir.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <a href="./index.html"><i class="fa-solid fa-house casa"></i></a>
+
+    <!-- Aba de cores -->
+    <div id="colorTab" class="color-tab">
+      <div class="color-grid">
+        <div class="color-box gradient-pink" style="background-color: #f1bcbe;">
+          <img src="./assets/images/gatoblack.png" alt="">
+        </div>
+        <div class="color-box gradient-yellow" style="background-color: #fffbba;">
+          <img src="./assets/images/abelha.png" alt="">
+        </div>
+        <div class="color-box gradient-purple" style="background-color: #f6e3f2;">
+          <img src="./assets/images/logo.png" alt="">
+        </div>
+        <div class="color-box gradient-blue" style="background-color: #8787ff;">
+          <img src="./assets/images/robozinho.png" alt="">
+        </div>
+        <div class="color-box gradient-bronw" style="background-color: #c08a5c;">
+          <img src="./assets/images/pena.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <a href=""><i class="fa-solid fa-palette palete"></i></a>
+
+    <!-- form recuperar senha -->
+
+    <div class="wrapper">
+      <div class="form-box recuperar">
+        <h2>Recuperar senha</h2>
+
+        <form action="././php/users/recuperar_senha.php" id="recuperarSenhaForm" method="POST">
+
+          <div class="input-group">
+            <div class="input-box">
+              <input type="email" id="email" name="email" required placeholder="Digite seu email" />
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+            <p>O email pode demorar alguns instantes.</p>
+        </form>
+        <div id="mensagem"></div>
+
+      </div>
+
+      <!-- js -->
+
+      <script>
+
+        document.getElementById('recuperarSenhaForm').addEventListener('submit', function (e) {
+          e.preventDefault(); // Impede o envio normal do formulário
+
+          const formData = new FormData(this); // Obtém os dados do formulário
+          fetch('././php/users/recuperar_senha.php', {
+            method: 'POST',
+            body: formData
+          })
+            .then(response => response.text()) // Espera uma resposta de texto
+            .then(data => {
+              document.getElementById('mensagem').textContent = data; // Mostra a mensagem na página
+            })
+            .catch(error => console.error('Erro:', error));
+        });
+
+
+      </script>
+
+      <script src="https://kit.fontawesome.com/b549ba979b.js" crossorigin="anonymous"></script>
+      <script src="./assets/js/temas.js"></script>
+</body>
+
+</html>

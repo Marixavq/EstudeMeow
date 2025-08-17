@@ -1,0 +1,164 @@
+:root {
+  /*variaveis css dos cards*/
+
+  --first-color: hsl(300, 14%, 1%);
+  --first-color-light: hsl(0, 0%, 100%);
+  --second-color: hsl(0, 0%, 0%);
+  --dark-color: hsl(0, 100%, 99%);
+  --white-color: hsl(0, 0%, 88%);
+  --body-color: hsl(281, 42%, 15%);
+  --container-color: hsl(0, 0%, 96%);
+
+
+  /* fonte e tipografia dos cards*/
+  --body-font: "Bai Jamjuree", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+
+  /* cores dos temas originais */
+  /* --pink: #ff66b3;
+    --violet: #6a0dad;
+
+    --gradient: linear-gradient(90deg, rgb(199, 162, 255), rgb(177, 129, 250));
+    --gradient-button: linear-gradient(90deg, rgb(234, 224, 248), rgb(160, 99, 252));
+    --violet: #b45eb0;
+    --pink: #c7a2ff;   
+    --background: #f6e3f2;
+    --purple:#9F6D9D;
+    --roxo:#9307b3;
+} */
+
+  --gradient: linear-gradient(90deg, rgb(199, 162, 255), rgb(177, 129, 250));
+  --detalls: #9f6d9d;
+  --pink: #c7a2ff;
+
+  --central-color: #f6e3f2;
+  --background-color: linear-gradient(90deg, rgb(199, 162, 255), rgb(177, 129, 250));
+  --button: linear-gradient(90deg, rgb(229, 215, 250), rgb(190, 148, 252));
+}
+
+/* Cores sólidas e gradientes como classes no CSS */
+.gradient-pink {
+  --central-color: #FFD1D1;
+  --detalls: #ff8b8b;
+  --retangulo: #f7acac;
+  --background-color: linear-gradient(135deg, rgb(255, 179, 179), rgb(246, 139, 139));
+  --button: linear-gradient(135deg, rgb(248, 204, 204), rgb(247, 162, 162));
+}
+
+.gradient-yellow {
+  --central-color: #fffbba;
+  --detalls: #eca12b;
+  --retangulo: #fac878;
+  --background-color: linear-gradient(90deg, rgb(238, 210, 86), rgb(252, 200, 94));
+  --button: linear-gradient(90deg, rgb(245, 239, 211), rgb(247, 214, 150));
+}
+
+.gradient-purple {
+  --central-color: #f6e3f2;
+  --detalls: #9f6d9d;
+  --retangulo: #c298c0;
+  --background-color: linear-gradient(90deg, rgb(199, 162, 255), rgb(177, 129, 250));
+  --button: linear-gradient(90deg, rgb(229, 215, 250), rgb(178, 133, 247));
+}
+
+.gradient-blue {
+  --central-color: #6da7cc;
+  --detalls: #095570;
+  --retangulo: #3581a0;
+  --background-color: linear-gradient(90deg, rgb(47, 60, 112), rgb(71, 117, 146));
+  --button: linear-gradient(135deg, rgb(152, 167, 189), rgb(81, 111, 129));
+}
+
+.gradient-bronw {
+  --central-color: #ce9c6d;
+  --detalls: #824025;
+  --retangulo: #9b6550;
+  --background-color: linear-gradient(90deg, rgb(218, 172, 134), rgb(138, 94, 59));
+  --button: linear-gradient(90deg, rgb(216, 193, 173), rgb(139, 104, 76));
+}
+
+/* modal */
+
+/* Aba de Cores */
+
+.color-tab {
+  position: absolute;
+  top: 50px;
+  /* ajuste de acordo com a posição desejada */
+  right: 50px;
+  /* ajuste a posição horizontal */
+  width: 150px;
+  padding: 10px;
+  display: none;
+  /* oculto por padrão */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.color-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.color-box {
+  position: relative;
+  width: 60px;
+  /* Ajuste conforme necessário */
+  height: 90px;
+  /* Ajuste conforme necessário */
+  display: flex;
+  /* Centraliza o conteúdo interno */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+  /* Para cortar o excesso de imagem */
+}
+
+.color-box img {
+  max-width: 80%;
+  /* Limita a largura da imagem ao tamanho do contêiner */
+  max-height: 80%;
+  /* Limita a altura da imagem ao tamanho do contêiner */
+  object-fit: contain;
+  /* Ajusta a imagem para caber no contêiner sem distorção */
+}
+
+.color-grid .color-box:nth-child(3) {
+  grid-column: span 2;
+  justify-self: center;
+}
+
+body {
+  background: var(--background-color);
+}
+
+header:not(.theme-image),
+footer:not(.theme-image),
+.container {
+  background-color: var(--central-color);
+}
+
+/* Classes específicas para temas com imagens */
+header.theme-image,
+footer.theme-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

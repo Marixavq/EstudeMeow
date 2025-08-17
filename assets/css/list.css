@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  
+  background: var(--background-color);
+  padding: 0.5rem 4% 0.5rem 4%;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 97vh;
+  background: var(--central-color);
+  border-radius: .5rem;
+  /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2); */
+}
+
+.casa {
+  color: var(--detalls);
+  font-size: 2rem;
+  margin-top: 5px;
+  position: fixed;
+  /* Fixa o ícone na tela */
+  top: 5%;
+  /* Centraliza verticalmente */
+  right: 75px;
+  /* Alinha o ícone à direita */
+  transform: translateY(-50%);
+  /* Ajusta para centralizar completamente */
+}
+
+.palete{
+  color: transparent;
+}
+
+hr{
+  border-color: var(--detalls); 
+ }
+
+p {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+}
+
+.header button {
+  position: absolute;
+  right: 18%;
+  margin-top: -30px;
+}
+
+.header i {
+  font-size: 22px;
+}
+
+.to-do {
+  margin-top: 40px;
+  width: 60%;
+}
+
+.textInsert {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  width: 90%;
+}
+
+.divInsert {
+  padding: 10px;
+  background-color: var(--central-color);
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 6px 5px 10px 0px var(--detalls);
+}
+
+button {
+  width: 10%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.bx-plus {
+  font-size: 30px;
+  margin-left: 10px;
+  background-color: var(--detalls);
+  border-radius: 50%;
+  padding: 5px;
+  color: white;
+}
+
+.divLi {
+  margin-top: 20px;
+  padding: 10px;
+  background: var(--central-color);
+  border-radius: 10px;
+  box-shadow: 6px 5px 10px 0px var(--detalls);
+  display: flex;
+  align-items: center;
+}
+
+.divLi span {
+  width: 80%;
+  color: #3d3d3d;
+  font-size: 1.2rem;
+}
+
+.divLi input {
+  width: 10%;
+  outline: none;
+  accent-color: currentcolor;
+}
+
+.divLi i {
+  font-size: 22px;
+  color: brown;
+}
+
+li {
+  list-style-type: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+/* substituição do "alert" */
+
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.notification {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.notification.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.notification.error {
+  background-color: #f44336;
+}
+
+@media (max-width: 775px) {
+  html{
+    font-size: .8rem;
+  }
+  
+  input {
+    width: 70%;
+  }
+
+  .divInsert button {
+    width: 30%;
+  }
+
+  i {
+    font-size: 10px;
+    padding: 0px;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .casa {
+    font-size: 2rem;
+    margin-top: 5px;
+    position: fixed;
+    /* Fixa o ícone na tela */
+    top: 5%;
+    /* Centraliza verticalmente */
+    right: 45px;
+    /* Alinha o ícone à direita */
+    transform: translateY(-50%);
+    /* Ajusta para centralizar completamente */
+  }
+}

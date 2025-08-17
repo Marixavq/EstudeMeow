@@ -1,0 +1,221 @@
+.headingcont {
+    /* margin: 10rem 9rem 0rem 9rem; */
+    padding: 2rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.list-button i {
+    font-size: 6rem;
+    height: 6rem;
+    width: 8rem;
+    /* margin-left: -4rem; */
+    /* margin-right: -3rem; */
+}
+
+.list-button .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    margin-bottom: 4vh;
+    padding: .8rem 4rem;
+    max-width: 40rem;
+    max-height: 20rem;
+    border: solid 2px #000;
+    border-radius: 30rem;
+    background: var(--button);
+    color: #000;
+    cursor: pointer;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.bt {
+    align-items: center;
+    /* justify-content: center; */
+    margin-left: 50%;
+    margin-bottom: 4vh;
+    padding: .8rem 4rem;
+    max-width: 40rem;
+    max-height: 20rem;
+    border: solid 2px #000;
+    border-radius: 30rem;
+    background: var(--button);
+    color: #000;
+    cursor: pointer;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.list-button .btn:hover, .bt:hover {
+    background: var(--retangulo);
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact form {
+    flex: 1 1 50rem;
+    height: 30rem;
+    border: .3rem solid #000;
+    border-radius: 5rem;
+    padding: 2rem;
+    background: var(--button);
+}
+
+.contact form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.textarea-container {
+    /* display: flex; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.contact textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.7rem 0;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: #000;
+    background: none;
+    border: none;
+    height: auto;
+}
+
+.contact form .inputBox input:focus,
+.contact form textarea:focus {
+    border-color: var(--detalls);
+}
+
+.contact form .inputBox input {
+    width: 49%;
+}
+
+.contact form textarea {
+    height: 20rem;
+    resize: none;
+}
+
+/* estrelas */
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2em;
+    color: #797575;
+    cursor: pointer;
+}
+
+/* Estilo para estrelas preenchidas ao passar o mouse */
+.star-rating label:hover,
+.star-rating label:hover~label,
+.star-rating input:checked~label {
+    color: #ffc107;
+   
+}
+
+/* Media Queries */
+
+@media (max-width: 825px) {
+    .list-button {
+        display: flex;
+        flex-direction: row;
+        /* Botões lado a lado */
+        justify-content: center;
+        margin-top: 1rem;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .list-button i {
+        font-size: 4rem;
+        /* height: 6rem; */
+        /* width: 8rem; */
+        margin-top: 2rem;
+        margin-left: -3rem;
+        /* margin-right: 1rem; */
+    }
+
+    .list-button .btn {
+        margin: 1rem auto;
+        margin-bottom: 4vh;
+        padding: .8rem 4rem;
+        max-width: 25rem;
+        max-height: 6rem;
+        font-size: 2rem;
+    }
+
+    .bt {
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact form .inputBox input {
+        width: 100%;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+    .contact form {
+        max-height: 30rem;
+        width: 100%;
+    }
+
+
+    .bt {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+    }
+
+    .list-button{
+        display: flex;
+        flex-direction: column; /* Botões lado a lado */
+        justify-content: center;
+        margin-top: 1rem;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .list-button i {
+        font-size: 6rem;
+        height: 6rem;
+        width: 8rem;
+        margin-top: 0.5rem;
+        /* margin-left: -3rem; */
+        /* margin-right: 1rem; */
+    }
+
+    .list-button .btn {
+        margin: 1rem auto;
+        margin-bottom: 4vh;
+        padding: .8rem 4rem;
+        max-width: 60rem;
+        max-height: 20rem;
+        font-size: 2.5rem;
+    }
+}
